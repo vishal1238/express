@@ -14,6 +14,7 @@ app.use("/api",userRouter)
 
 
 app.listen(9000, () => {
+
     ConnectDB()
     console.log('Server is running at http://localhost:9000/');
 })
