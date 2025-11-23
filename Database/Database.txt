@@ -1,0 +1,60 @@
+What is Database ? —
+
+A database is a collection of data that allows storing, managing and retrieving information efficiently.
+
+Common used databases -
+
+1. SQL database — MySQL, PostgreSQL ( stores data in tables )
+
+2. NoSQL database — MongoDB ( Document Based )
+
+***MongoDB—
+
+MongoDB is a NoSQL database that stores data in flexible ,
+"JSON — like format instead of tables.
+[
+    {
+        "Id": 1,
+        "Name": "Vishal",
+        "Age": 21
+    },
+    {
+        "Id": 2,
+        "Name": Dev",
+        "Age": 22
+    }
+]
+
+
+***Mongoose —
+
+- Mongoose is an ODM ( Object Data Modeling ) library for
+MongoDB and Node JS.
+
+- It helps developers interact with MongoDB using an easy an Structured approach by defining schemas and models.
+
+- Install Mongoose using -
+npm install mongoose
+
+Set-UP MongoDB
+        |
+Install mongoose
+        | 
+Connect DB
+        |
+Design Schema
+        |
+Create model based on Schema for
+performing CRUD Operations
+
+
+Schema —
+- A Schema in Mongoose defines the structure of documents within a MongoDB collection.
+
+- It specifies the fields , their types, vali$tion rules, and default values.
+
+Model —
+
+A model is wrapper for schema and provides an interface to interact with MongoDB Collection.
+
+export let User = mongoose.mode1("User", userschema)

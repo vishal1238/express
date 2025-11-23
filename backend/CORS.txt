@@ -1,0 +1,14 @@
+CORS (Cross Origin Resource Sharing) in express JS
+
+- CORS is a security feature in web browsers that prevents
+requests from different origins unless explicitly allowed by
+the server.
+
+- Same-origin Policy restricts requests from different origins (
+protocol, domain, or port )
+
+- CORS allows servers to specify who can access their
+resources.
+
+
+how to install: npm install cors

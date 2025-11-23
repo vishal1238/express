@@ -1,0 +1,5 @@
+Authentication - 
+- verifies who user is. (Login & SignUp using email/password)
+
+Authorization - 
+- Determines what a user can access

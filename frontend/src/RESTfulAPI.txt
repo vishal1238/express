@@ -1,0 +1,11 @@
+RESTful API (Representational State Transfer ) 
+
+- A RESTful API is a way for applications to communicate with each other over the internet using standard HTTP requests
+like GET, POST , PUT and DELETE.
+
+
+- Client ( ex. A mobile app or Website) sends a request.
+
+- Server receives the request and processes it.
+
+- Server sends back a response ( usually in JSON format )

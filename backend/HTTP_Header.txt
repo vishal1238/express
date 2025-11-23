@@ -1,0 +1,31 @@
+HTTP Headers-
+
+- HTTP Headers are key-value Pairs used in HTTP requests and
+responses to pass additional information between the client and
+the server.
+
+
+- They help in defining metadata, specifying content type, setting
+authentication tokens etc.
+
+
+- Types of HTTP Headers :
+
+1. Request Headers : Sent by the client to the server
+( User-Agent)
+
+2. Response Headers : Sent by the server to the client
+( Content-Type)
+
+
+HTTP Headers-
+
+Get request Headers:
+
+1. req.get - for getting Specific Headers.
+
+2. req.headers - for getting all headers.
+
+- Set Response Headers: use res.set( ) or res.header( )
+
+- Remove Headers : use res.removeHeader( headerName )
