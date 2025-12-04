@@ -18,6 +18,8 @@ app.use(cookieParser())
 
 app.use("/api", authRouter)
 
+
+
 app.listen(9000,() => {
     ConnectDB()
     console.log("Your sever is running at http://localhost:9000/");

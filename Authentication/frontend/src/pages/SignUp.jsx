@@ -19,19 +19,24 @@ const SignUp = () => {
     const handleSignUP = async(e) =>{
         e.preventDefault()
         try {
-            let data = await axios.post(sereverURL + "/api/signup",{
-                firstName,
-                lastName,
-                userName,
-                email,
-                password
+            let formdata = new FormData()
+            formdata.append("firstName", firstName)
+            formdata.append("lastName", lastName)
+            formdata.append("userName", userName)
+            formdata.append("email", email)
+            formdata.append("password", password)
 
-            },{withCredentials: true}) // to pass cookies
+            if(backendImage){
+                formdata.append("profileImage", backendImage)
+            }
+            let data = await axios.post(sereverURL + "/api/signup",formdata,
+                {withCredentials: true,
+                    headers: {"Content-Type": "multipart/from-data"}
+                 }) // to pass cookies
             console.log(data);
             
         } catch (error) {
-            console.log(error.message);
-            
+            console.log(error.message);  
         }
     }
 

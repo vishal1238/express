@@ -38,7 +38,7 @@ const Login = () => {
                 <input type='email' placeholder='email' className= 'w-[80%] h-[50px] bg-white outline-none border-none rounded-lg px-2.5 py-[7px]' value = {email} onChange={(e) => setEmail(e.target.value)}/>
                 <input type='password' placeholder='password' className= 'w-[80%] h-[50px] bg-white outline-none border-none rounded-lg px-2.5 py-[7px]' value = {password} onChange={(e) => setPassword(e.target.value)}/>
 
-                
+
                 <button className='bg-[#149eca] px-2.5 py-[5px] rounded-lg font-bold cursor-pointer'>Login</button>
                 <p className='text-white '>Craete new account <span className='text-blue-300 cursor-pointer font-bold' onClick={() => navigate("/signup")}>Sign Up</span></p>
 

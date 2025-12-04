@@ -3,15 +3,24 @@ import User from "../models/user.model.js"
 import bcrypt from "bcryptjs"
 import generateToken from "../config/token.js"
 import strict from "assert/strict"
+import uploadOnCloudinary from "../config/cloudinary.js"
 
 export const signUp = async (req, res) => {
     try {
         const{firstName, lastName, email, userName, password} = req.body
+        console.log(req.body);
+        
 
         if(!firstName || !lastName || !email || !userName || !password){
             return res.status(400).json({message: "send all details"})
         }
         
+        let profileImage;
+        console.log(req.file);
+        if(req.file){
+            profileImage = await uploadOnCloudinary(req.file.path)
+        }
+
         let existUser = await User.findOne({email})
 
         if(existUser){
@@ -25,8 +34,10 @@ export const signUp = async (req, res) => {
             lastName,
             email, 
             userName, 
-            password: hassedpassword
+            password: hassedpassword,
+            profileImage
         })
+
         //token generate 
         let token;
         try {
@@ -49,7 +60,8 @@ export const signUp = async (req, res) => {
             firstName,
             lastName,
             email, 
-            userName, 
+            userName,
+            profileImage
         }})
 
     } catch (error) {

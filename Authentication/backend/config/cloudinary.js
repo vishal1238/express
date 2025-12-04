@@ -1,5 +1,7 @@
 import { v2 as cloudinary } from 'cloudinary';
 import fs from "fs";
+import dotenv from 'dotenv'
+dotenv.config()
 
 cloudinary.config({
     cloud_name: process.env.CLOUDINARY_CLOUD_NAME, 
@@ -13,7 +15,7 @@ const uploadOnCloudinary = async(filePath) => {
             return null
         }
 
-        let result = cloudinary.uploader.upload()
+        let result = await cloudinary.uploader.upload()
         console.log(result);
         return result.secure_url
 
